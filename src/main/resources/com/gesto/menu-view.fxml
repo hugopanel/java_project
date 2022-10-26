@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="449.0" prefWidth="603.0" style="-fx-background-color: #253551;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Pane layoutX="-8.0" layoutY="71.0" prefHeight="330.0" prefWidth="611.0" style="-fx-background-color: #e0e0db;">
+            <children>
+                <TabPane layoutX="14.0" layoutY="7.0" prefHeight="316.0" prefWidth="590.0" tabClosingPolicy="UNAVAILABLE" fx:id="TabPane">
+                    <tabs>
+                        <Tab text="Appetizers">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tableAppetizers" prefHeight="264.0" prefWidth="597.0">
+                                <columns>
+                                  <TableColumn fx:id="clmnNameAppetizers" prefWidth="75.0" text="Name" />
+                                  <TableColumn fx:id="clmnPriceAppetizers" prefWidth="75.0" text="Price" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children></AnchorPane>
+                            </content>
+                        </Tab>
+                  <Tab text="Mains">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tableMains" prefHeight="264.0" prefWidth="597.0">
+                                 <columns>
+                                    <TableColumn fx:id="clmnNameMains" prefWidth="75.0" text="Name" />
+                                    <TableColumn fx:id="clmnPriceMains" prefWidth="75.0" text="Price" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Desserts">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tableDesserts" prefHeight="264.0" prefWidth="597.0">
+                                 <columns>
+                                    <TableColumn fx:id="clmnNameDesserts" prefWidth="75.0" text="Name" />
+                                    <TableColumn fx:id="clmnPriceDesserts" prefWidth="75.0" text="Price" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Drinks">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tableDrinks" prefHeight="264.0" prefWidth="597.0">
+                                 <columns>
+                                    <TableColumn fx:id="clmnNameDrinks" prefWidth="75.0" text="Name" />
+                                    <TableColumn fx:id="clmnPriceDrinks" prefWidth="75.0" text="Price" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Other">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tableOthers" prefHeight="264.0" prefWidth="597.0">
+                                 <columns>
+                                    <TableColumn fx:id="clmnNameOthers" prefWidth="75.0" text="Name" />
+                                    <TableColumn fx:id="clmnPriceOthers" prefWidth="75.0" text="Price" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                    </tabs>
+                </TabPane>
+            </children></Pane>
+        <ImageView fitHeight="85.0" fitWidth="157.0" layoutX="54.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@gesto logo.png" />
+            </image>
+        </ImageView>
+        <Text fill="#646877" layoutX="482.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="id : 000354273672" />
+        <Text fill="#646877" layoutX="426.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Société : UnKebabPourTous" />
+      <HBox alignment="CENTER" layoutY="400.0" prefHeight="32.0" prefWidth="603.0" style="-fx-background-color: white;">
+         <children>
+            <TextField id="textInput" fx:id="txtName" prefHeight="30.0" prefWidth="110.0" promptText="Item Name" />
+            <TextField id="textInput" fx:id="txtPrice" prefHeight="30.0" prefWidth="110.0" promptText="Item Price" />
+            <Button id="addBtn" fx:id="addBtn" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #253551; -fx-text-fill: white;" text="Add" />
+            <Button id="updateBtn" fx:id="updateBtn" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #253551; -fx-text-fill: white;" text="Update" />
+            <Button id="removeBtn" fx:id="removeBtn" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #253551; -fx-text-fill: white;" text="Remove" />
+         </children>
+      </HBox>
+      <Label layoutX="14.0" layoutY="19.0" onMouseClicked="#exitWindow" text="&lt;" textFill="#b4b4b4">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

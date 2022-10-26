@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.CardPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #253551;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app_javafx.App">
+    <children>
+        <Pane layoutX="-8.0" layoutY="71.0" prefHeight="330.0" prefWidth="611.0" style="-fx-background-color: #e0e0db;">
+            <children>
+                <TabPane layoutX="14.0" layoutY="7.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="590.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Day">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="228.0" prefWidth="421.0">
+                           <children>
+                              <CardPane id="listView" fx:id="listView" prefHeight="224.0" prefWidth="590.0" />
+                              <TableView layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="571.0">
+                                 <columns>
+                                    <TableColumn prefWidth="423.33331167697906" text="Orders" />
+                                    <TableColumn minWidth="0.0" prefWidth="149.66668701171875" text="Prix" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                            </content>
+                        </Tab>
+                  <Tab text="Week">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="206.0" prefWidth="590.0">
+                           <children>
+                              <CardPane prefHeight="221.0" prefWidth="590.0" />
+                              <TableView layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="571.0">
+                                 <columns>
+                                    <TableColumn prefWidth="423.33331167697906" text="Orders" />
+                                    <TableColumn minWidth="0.0" prefWidth="149.66668701171875" text="Prix" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Month">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <CardPane prefHeight="221.0" prefWidth="590.0" />
+                              <TableView layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="571.0">
+                                 <columns>
+                                    <TableColumn prefWidth="423.33331167697906" text="Orders" />
+                                    <TableColumn minWidth="0.0" prefWidth="149.66668701171875" text="Prix" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Year">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <CardPane prefHeight="221.0" prefWidth="590.0" />
+                              <TableView layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="571.0">
+                                 <columns>
+                                    <TableColumn prefWidth="423.33331167697906" text="Orders" />
+                                    <TableColumn minWidth="0.0" prefWidth="149.66668701171875" text="Prix" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                    </tabs>
+                </TabPane>
+            <Pane layoutX="446.0" layoutY="275.0" prefHeight="57.0" prefWidth="165.0" style="-fx-background-color: #253551;">
+               <children>
+                  <Label layoutX="14.0" layoutY="16.0" text="Total : " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            </children></Pane>
+        <ImageView fitHeight="85.0" fitWidth="157.0" layoutX="14.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../../../logore.png" />
+            </image>
+        </ImageView>
+        <Text fill="#646877" layoutX="482.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="id : 000354273672" />
+        <Text fill="#646877" layoutX="426.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Société : UnKebabPourTous" />
+    </children>
+</AnchorPane>

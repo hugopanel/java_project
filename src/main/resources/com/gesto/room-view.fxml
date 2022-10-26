@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #253551;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="-8.0" layoutY="71.0" prefHeight="330.0" prefWidth="611.0" style="-fx-background-color: #e0e0db;">
+         <children>
+            <ListView fx:id="lstAvailable" layoutX="20.0" layoutY="32.0" prefHeight="128.0" prefWidth="287.0" />
+            <Label alignment="CENTER" layoutX="20.0" layoutY="14.0" prefHeight="17.0" prefWidth="287.0" text="Available Tables" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ListView fx:id="lstWaiting" layoutX="310.0" layoutY="32.0" prefHeight="128.0" prefWidth="287.0" />
+            <Label alignment="CENTER" layoutX="310.0" layoutY="14.0" prefHeight="17.0" prefWidth="287.0" text="Waiting to order" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ListView fx:id="lstServed" layoutX="20.0" layoutY="183.0" prefHeight="128.0" prefWidth="287.0" />
+            <Label alignment="CENTER" layoutX="20.0" layoutY="165.0" prefHeight="17.0" prefWidth="287.0" text="Order served" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ListView fx:id="lstCheck" layoutX="310.0" layoutY="183.0" prefHeight="128.0" prefWidth="287.0" />
+            <Label alignment="CENTER" layoutX="310.0" layoutY="165.0" prefHeight="17.0" prefWidth="287.0" text="Waiting for the check" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <ImageView fitHeight="85.0" fitWidth="157.0" layoutX="54.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@gesto logo.png" />
+         </image>
+      </ImageView>
+      <Text fill="#646877" layoutX="482.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="id : 000354273672" />
+      <Text fill="#646877" layoutX="426.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Société : UnKebabPourTous" />
+      <Label layoutX="15.0" layoutY="18.0" onMouseClicked="#exitWindow" text="&lt;" textFill="#bfbfbf">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
