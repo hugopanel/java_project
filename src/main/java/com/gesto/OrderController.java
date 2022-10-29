@@ -181,6 +181,9 @@ public class OrderController {
             // We add the order
             db.Orders.insertOrder(OrderStatus.PREPARING, table, menuItemList);
 
+            // We set the table as unavailable
+            table.setAvailable(false);
+
             // We generate a check
             Check check = db.Orders.getOrders()
                     .get(
@@ -189,29 +192,10 @@ public class OrderController {
                     .generateCheck(db);
             db.Checks.insertCheck(check.getAmount(), check.getPaymentDate(), check.getOrder());
 
-            // We print the check to a file
-            try {
-                File f = new File("C:\\Users\\hugop\\OneDrive\\Bureau\\check.txt");
-                FileWriter fw = new FileWriter(f, false);
-                fw.write("MyRestaurant -- Check\nPowered by Gesto\n\n---------------------\n");
-                fw.write("Order on " + check.getPaymentDate() + "\n");
-                fw.write("---- ITEMS LIST: ---------\n");
-                for (MenuItem item: check.getOrder().getMenuItems(db)) {
-                    fw.write(item.getName() + " : " + item.getPrice() + "\n");
-                }
-                fw.write("==================\nTotal due: " + check.getAmount() + ".");
-                fw.write("\n\n\nThank you for dining at MyRestaurant! We hope to see you again soon!");
-            } catch (Exception ex) {
-                System.out.println(ex);
-            }
-
-            // We set the table as unavailable
-            table.setAvailable(false);
-
             // We can close the window
             exitScene();
         } catch (SQLException ex) {
-            System.out.println(ex);
+
         }
     }
 }
